@@ -1,2 +1,4 @@
 'APP_DEBUG=true #false para produccion en el file .env
 sail artisan route:list
+
+sail artisan make:controller HomeController
