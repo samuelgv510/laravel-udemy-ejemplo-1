@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function inicio()
     {
-        echo 'hola desde mi ruta de controlador';
+        return view('home.home');
     }
     public function hola()
     {
