@@ -48,3 +48,5 @@
 </ul>
 <hr>
 @include('home.incluido')
+<hr>
+<x-componente :mensaje="$texto" />
