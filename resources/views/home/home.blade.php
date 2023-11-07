@@ -50,3 +50,13 @@
 @include('home.incluido')
 <hr>
 <x-componente :mensaje="$texto" />
+<hr>
+<h3>Enlaces</h3>
+<ul>
+    <li>
+        <a href="{{ route('home.hola') }}">Hola inicio</a>
+    </li>
+    <li>
+        <a href="{{ route('home.parametros', ['id' => 1, 'slug' => 'mi-slug']) }}?page=1">párametros</a>
+    </li>
+</ul>
