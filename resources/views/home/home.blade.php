@@ -46,3 +46,5 @@
             {{ $pais['nombre'] . ' | ' . $pais['dominio'] }}</li>
     @endforeach
 </ul>
+<hr>
+@include('home.incluido')
