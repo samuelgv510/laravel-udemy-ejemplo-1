@@ -10,8 +10,15 @@ class HomeController extends Controller
     {
         $texto = 'Hola con ñandu modificada';
         $numero = 12;
+        $paises = array(
+            array("nombre" => "Chile", "dominio" => "cl"),
+            array("nombre" => "Perú", "dominio" => "pe"),
+            array("nombre" => "Venezuela", "dominio" => "ve"),
+            array("nombre" => "México", "dominio" => "mx"),
+            array("nombre" => "España", "dominio" => "es"),
+        );
         //return view('home.home', ['texto' => $texto]);
-        return view('home.home', compact('texto', 'numero'));
+        return view('home.home', compact('texto', 'numero', 'paises'));
     }
     public function hola()
     {

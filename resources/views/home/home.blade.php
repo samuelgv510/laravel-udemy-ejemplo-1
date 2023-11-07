@@ -31,3 +31,18 @@
 <hr>
 <h3>Condicional 3</h3>
 <h4>{{ $numero == 12 ? 'es 12 desde ternario' : 'no es 12' }}</h4>
+<hr>
+<h3>Ciclo for</h3>
+<ul>
+    @for ($i = 1; $i <= 10; $i++)
+        <li>{{ $i }}</li>
+    @endfor
+</ul>
+<hr>
+<h3>Recorrer un arreglo</h3>
+<ul>
+    @foreach ($paises as $pais)
+        <li>{{ $loop->first }} - {{ $loop->last }} - {{ $loop->index }} -
+            {{ $pais['nombre'] . ' | ' . $pais['dominio'] }}</li>
+    @endforeach
+</ul>
