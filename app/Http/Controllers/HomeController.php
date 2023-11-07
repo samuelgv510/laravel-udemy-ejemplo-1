@@ -9,8 +9,9 @@ class HomeController extends Controller
     public function inicio()
     {
         $texto = 'Hola con ñandu modificada';
+        $numero = 12;
         //return view('home.home', ['texto' => $texto]);
-        return view('home.home', compact('texto'));
+        return view('home.home', compact('texto', 'numero'));
     }
     public function hola()
     {
