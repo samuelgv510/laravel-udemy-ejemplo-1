@@ -60,3 +60,6 @@
         <a href="{{ route('home.parametros', ['id' => 1, 'slug' => 'mi-slug']) }}?page=1">párametros</a>
     </li>
 </ul>
+<hr>
+<h3>Archivos estáticos</h3>
+<img src="{{ asset('images/logo.png') }}" alt="">
