@@ -4,3 +4,5 @@ sail artisan route:list
 sail artisan make:controller HomeController
 
 sail artisan make:component Componente
+
+sail artisan make:controller TemplateController
