@@ -103,6 +103,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
+    @stack('css')
 </head>
 
 <body>
@@ -216,8 +217,9 @@
         </header>
         <div class="nav-scroller py-1 mb-3 border-bottom">
             <nav class="nav nav-underline justify-content-between">
-                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('template.inicio') }}">Home</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.inicio') }}">Home</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.inicio') }}">Blade</a>
+                <a class="nav-item nav-link link-body-emphasi active" href="{{ route('template.stack') }}">Stack</a>
                 <a class="nav-item nav-link link-body-emphasis" href="#">Formularios</a>
             </nav>
         </div>
@@ -232,6 +234,8 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
+    @stack('js')
 </body>
 
 </html>

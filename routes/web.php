@@ -10,3 +10,4 @@ Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
 Route::get('/parametros/{id}/{slug}', [HomeController::class, 'parametros'])->name('home.parametros');
 
 Route::get('/', [TemplateController::class, 'inicio'])->name('template.inicio');
+Route::get('/template/stack', [TemplateController::class, 'stack'])->name('template.stack');

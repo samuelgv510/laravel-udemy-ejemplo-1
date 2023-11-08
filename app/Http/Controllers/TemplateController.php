@@ -10,4 +10,8 @@ class TemplateController extends Controller
     {
         return view('template.home');
     }
+    public function stack()
+    {
+        return view('template.stack');
+    }
 }
