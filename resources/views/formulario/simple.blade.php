@@ -4,15 +4,17 @@
     <form action="{{ route('formulario.simple.post') }}" method="POST" name="form">
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" class="form-control">
+            <input type="text" name="nombre" id="nombre" class="form-control" value="{{ old('nombre') }}">
         </div>
         <div class="form-group">
             <label for="correo">E-Mail</label>
-            <input type="text" name="correo" id="correo" class="form-control">
+            <input type="text" name="correo" id="correo" class="form-control" value="{{ old('correo') }}">
         </div>
         <div class="form-group">
             <label for="descripcion">Descripción</label>
-            <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+            <textarea name="descripcion" id="descripcion" class="form-control">
+                {{ old('descripcion') }}
+            </textarea>
         </div>
         <div class="form-group">
             <label for="password">Contraseña</label>
