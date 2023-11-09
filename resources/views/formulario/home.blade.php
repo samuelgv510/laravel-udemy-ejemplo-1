@@ -3,7 +3,7 @@
     <h1>Formularios</h1>
     <ul>
         <li>
-            <a href="">Simple</a>
+            <a href="{{ route('formulario.simple') }}">Simple</a>
         </li>
         <li>
             <a href="">Flash</a>

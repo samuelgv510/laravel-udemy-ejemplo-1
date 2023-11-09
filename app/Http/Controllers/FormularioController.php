@@ -10,4 +10,12 @@ class FormularioController extends Controller
     {
         return view('formulario.home');
     }
+    public function simple()
+    {
+        return view('formulario.simple');
+    }
+    public function simple_post()
+    {
+        
+    }
 }

@@ -14,3 +14,5 @@ Route::get('/', [TemplateController::class, 'inicio'])->name('template.inicio');
 Route::get('/template/stack', [TemplateController::class, 'stack'])->name('template.stack');
 
 Route::get('/formulario', [FormularioController::class, 'inicio'])->name('formulario.inicio');
+Route::get('/formulario/simple', [FormularioController::class, 'simple'])->name('formulario.simple');
+Route::post('/formulario/simple', [FormularioController::class, 'simple_post'])->name('formulario.simple.post');
