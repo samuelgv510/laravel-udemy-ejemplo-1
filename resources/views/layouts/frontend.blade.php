@@ -219,8 +219,8 @@
             <nav class="nav nav-underline justify-content-between">
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.inicio') }}">Home</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.inicio') }}">Blade</a>
-                <a class="nav-item nav-link link-body-emphasi active" href="{{ route('template.stack') }}">Stack</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Formularios</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.stack') }}">Stack</a>
+                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('formulario.inicio') }}">Formularios</a>
             </nav>
         </div>
     </div>

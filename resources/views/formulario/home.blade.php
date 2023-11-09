@@ -1,0 +1,15 @@
+@extends('../layouts.frontend')
+@section('content')
+    <h1>Formularios</h1>
+    <ul>
+        <li>
+            <a href="">Simple</a>
+        </li>
+        <li>
+            <a href="">Flash</a>
+        </li>
+        <li>
+            <a href="">Upload</a>
+        </li>
+    </ul>
+@endsection

@@ -6,3 +6,5 @@ sail artisan make:controller HomeController
 sail artisan make:component Componente
 
 sail artisan make:controller TemplateController
+
+sail artisan make:controller FormularioController
