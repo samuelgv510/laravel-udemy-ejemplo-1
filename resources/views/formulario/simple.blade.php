@@ -19,6 +19,7 @@
             <input type="password" name="password" id="password" class="form-control">
         </div>
         <hr>
+        {{ csrf_field() }}
         <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
 @endsection
