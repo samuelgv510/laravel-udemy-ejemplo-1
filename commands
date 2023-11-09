@@ -10,3 +10,5 @@ sail artisan make:controller TemplateController
 sail artisan make:controller FormularioController
 
 sail artisan make:component Flash
+
+sail artisan make:rule ValidaSelect

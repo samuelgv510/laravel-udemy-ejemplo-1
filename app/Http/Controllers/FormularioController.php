@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Rules\ValidaSelect;
 
 class FormularioController extends Controller
 {
@@ -26,6 +27,7 @@ class FormularioController extends Controller
         //echo $request->input('nombre');
         $request->validate(
             [
+                'pais' => [new ValidaSelect],
                 'nombre' => 'required|min:6',
                 'correo' => 'required|email:rfc,dns',
                 'descripcion' => 'required',
