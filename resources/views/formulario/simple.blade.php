@@ -1,6 +1,7 @@
 @extends('../layouts.frontend')
 @section('content')
     <h1>Simple</h1>
+    <x-flash />
     <form action="{{ route('formulario.simple.post') }}" method="POST" name="form">
         <div class="form-group">
             <label for="nombre">Nombre</label>
@@ -12,9 +13,7 @@
         </div>
         <div class="form-group">
             <label for="descripcion">Descripción</label>
-            <textarea name="descripcion" id="descripcion" class="form-control">
-                {{ old('descripcion') }}
-            </textarea>
+            <textarea name="descripcion" id="descripcion" class="form-control">{{ old('descripcion') }}</textarea>
         </div>
         <div class="form-group">
             <label for="password">Contraseña</label>

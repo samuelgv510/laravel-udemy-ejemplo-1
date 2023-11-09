@@ -8,3 +8,5 @@ sail artisan make:component Componente
 sail artisan make:controller TemplateController
 
 sail artisan make:controller FormularioController
+
+sail artisan make:component Flash
