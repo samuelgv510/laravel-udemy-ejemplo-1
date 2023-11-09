@@ -4,6 +4,15 @@
     <x-flash />
     <form action="{{ route('formulario.simple.post') }}" method="POST" name="form">
         <div class="form-group">
+            <label for="pais">País</label>
+            <select name="pais" id="pais" class="form-control">
+                <option value="0">Seleccione...</option>
+                @foreach ($paises as $pais)
+                    <option value="{{ $pais['id'] }}">{{ $pais['nombre'] }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" value="{{ old('nombre') }}">
         </div>

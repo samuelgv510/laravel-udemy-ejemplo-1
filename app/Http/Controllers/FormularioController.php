@@ -12,7 +12,14 @@ class FormularioController extends Controller
     }
     public function simple()
     {
-        return view('formulario.simple');
+        $paises = array(
+            array("nombre" => "Chile", "id" => 1),
+            array("nombre" => "Perú", "id" => 2),
+            array("nombre" => "Venezuela", "id" => 3),
+            array("nombre" => "México", "id" => 4),
+            array("nombre" => "España", "id" => 5),
+        );
+        return view('formulario.simple', compact('paises'));
     }
     public function simple_post(Request $request)
     {
