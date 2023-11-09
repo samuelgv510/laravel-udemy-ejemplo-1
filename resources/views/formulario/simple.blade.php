@@ -29,6 +29,18 @@
             <input type="password" name="password" id="password" class="form-control">
         </div>
         <hr>
+        <div class="form-group">
+            <label for="intereses">Intereses</label>
+            <div class="form-check">
+                @foreach ($intereses as $interes)
+                    <input type="checkbox" name="interes_{{ $loop->index }}" id="interes_{{ $loop->index }}"
+                        class="form-check-input" value="{{ $interes['id'] }}">
+                    <label for="interes_{{ $loop->index }}" class="form-check-label">{{ $interes['nombre'] }}</label>
+                    <br>
+                @endforeach
+            </div>
+        </div>
+        <hr>
         {{ csrf_field() }}
         <input type="submit" value="Enviar" class="btn btn-primary">
     </form>

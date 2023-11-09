@@ -20,7 +20,14 @@ class FormularioController extends Controller
             array("nombre" => "México", "id" => 4),
             array("nombre" => "España", "id" => 5),
         );
-        return view('formulario.simple', compact('paises'));
+        $intereses = array(
+            array("nombre" => "Deportes", "id" => 1),
+            array("nombre" => "Música", "id" => 2),
+            array("nombre" => "Religión", "id" => 3),
+            array("nombre" => "Comida", "id" => 4),
+            array("nombre" => "Viajes", "id" => 5),
+        );
+        return view('formulario.simple', compact('paises', 'intereses'));
     }
     public function simple_post(Request $request)
     {
@@ -43,5 +50,17 @@ class FormularioController extends Controller
                 'password.min' => 'El campo Contraseña debe tener al menos 6 caracteres',
             ]
         );
+        $intereses = array(
+            array("nombre" => "Deportes", "id" => 1),
+            array("nombre" => "Música", "id" => 2),
+            array("nombre" => "Religión", "id" => 3),
+            array("nombre" => "Comida", "id" => 4),
+            array("nombre" => "Viajes", "id" => 5),
+        );
+        foreach ($intereses as $key => $interes) {
+            if (isset($_POST['interes_' . $key])) {
+                echo $_POST['interes_' . $key] . "<br>";
+            }
+        }
     }
 }
