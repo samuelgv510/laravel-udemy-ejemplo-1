@@ -14,8 +14,8 @@ class FormularioController extends Controller
     {
         return view('formulario.simple');
     }
-    public function simple_post()
+    public function simple_post(Request $request)
     {
-        
+        echo $request->input('nombre');
     }
 }
