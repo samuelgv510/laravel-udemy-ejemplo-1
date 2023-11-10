@@ -63,4 +63,19 @@ class FormularioController extends Controller
             }
         }
     }
+    public function flash()
+    {
+        return view('formulario.flash');
+    }
+    public function flash2(Request $request)
+    {
+        //$request->session()->flash('css', 'success');
+        session()->flash('css', 'success');
+        session()->flash('mensaje', 'Mensaje desde flash con ñandú');
+        return redirect()->route('formulario.flash3');
+    }
+    public function flash3()
+    {
+        return view('formulario.flash3');
+    }
 }

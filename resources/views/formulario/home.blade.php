@@ -6,7 +6,7 @@
             <a href="{{ route('formulario.simple') }}">Simple</a>
         </li>
         <li>
-            <a href="">Flash</a>
+            <a href="{{ route('formulario.flash') }}">Flash</a>
         </li>
         <li>
             <a href="">Upload</a>
