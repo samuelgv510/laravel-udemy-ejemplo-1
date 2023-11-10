@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\FormularioController;
+use App\Http\Controllers\HelperController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -21,3 +22,5 @@ Route::get('/formulario/flash2', [FormularioController::class, 'flash2'])->name(
 Route::get('/formulario/flash3', [FormularioController::class, 'flash3'])->name('formulario.flash3');
 Route::get('/formulario/upload', [FormularioController::class, 'upload'])->name('formulario.upload');
 Route::post('/formulario/upload', [FormularioController::class, 'upload_post'])->name('formulario.upload.post');
+
+Route::get('/helper', [HelperController::class, 'inicio'])->name('helper.inicio');
