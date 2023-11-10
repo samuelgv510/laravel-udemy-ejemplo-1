@@ -22,3 +22,5 @@ sail artisan make:mail EjemploMailable
 sail artisan migrate
 
 sail artisan migrate:status
+
+sail artisan make:migration create_categorias_table
