@@ -4,4 +4,6 @@
     {{ Str::slug('mi muñeca me habló') }}
     <hr>
     <h3>{{ $version }}</h3>
+    <hr>
+    <h3>{{ Helper::getName('César') }}</h3>
 @endsection
