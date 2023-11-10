@@ -12,13 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class EjemploMailable extends Mailable
 {
     use Queueable, SerializesModels;
+    public $subject = "Curso Laravel";
+    public $texto = "";
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($texto)
     {
-        //
+        $this->texto = $texto;
     }
 
     /**
@@ -37,7 +39,7 @@ class EjemploMailable extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.ejemplo',
         );
     }
 
