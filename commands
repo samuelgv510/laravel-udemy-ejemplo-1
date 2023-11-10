@@ -28,3 +28,6 @@ sail artisan make:migration create_categorias_table
 sail artisan make:migration create_productos_table
 sail artisan make:migration create_productos_fotos_table
 #show create table productos
+
+sail artisan make:migration drop_stock_to_productos_table
+sail artisan migrate:rollback
