@@ -20,3 +20,5 @@ sail artisan make:controller EmailController
 sail artisan make:mail EjemploMailable
 
 sail artisan migrate
+
+sail artisan migrate:status
