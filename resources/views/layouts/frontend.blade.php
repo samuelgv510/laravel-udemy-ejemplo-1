@@ -221,7 +221,8 @@
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.inicio') }}">Blade</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.stack') }}">Stack</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('formulario.inicio') }}">Formularios</a>
-                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('helper.inicio') }}">Helper</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('helper.inicio') }}">Helper</a>
+                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('email.inicio') }}">E-mail</a>
             </nav>
         </div>
     </div>

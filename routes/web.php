@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\HelperController;
+use App\Http\Controllers\EmailController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -24,3 +25,6 @@ Route::get('/formulario/upload', [FormularioController::class, 'upload'])->name(
 Route::post('/formulario/upload', [FormularioController::class, 'upload_post'])->name('formulario.upload.post');
 
 Route::get('/helper', [HelperController::class, 'inicio'])->name('helper.inicio');
+
+Route::get('/email', [EmailController::class, 'inicio'])->name('email.inicio');
+Route::get('/email/enviar', [EmailController::class, 'enviar'])->name('email.enviar');
