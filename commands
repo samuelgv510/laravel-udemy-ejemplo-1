@@ -16,3 +16,5 @@ sail artisan make:rule ValidaSelect
 sail artisan make:controller HelperController
 
 sail artisan make:controller EmailController
+
+sail artisan make:mail EjemploMailable
