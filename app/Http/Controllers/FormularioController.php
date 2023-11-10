@@ -84,5 +84,14 @@ class FormularioController extends Controller
     }
     public function upload_post(Request $request)
     {
+        $request->validate(
+            [
+                'foto' => 'required|mimes:jpg,png|max:2048'
+            ],
+            [
+                'foto.required' => 'El campo foto está vacío',
+                'foto.mimes' => 'El campo foto debe ser JPG|PNG'
+            ]
+        );
     }
 }
