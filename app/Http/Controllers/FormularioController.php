@@ -78,4 +78,11 @@ class FormularioController extends Controller
     {
         return view('formulario.flash3');
     }
+    public function upload()
+    {
+        return view('formulario.upload');
+    }
+    public function upload_post(Request $request)
+    {
+    }
 }

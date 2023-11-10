@@ -9,7 +9,7 @@
             <a href="{{ route('formulario.flash') }}">Flash</a>
         </li>
         <li>
-            <a href="">Upload</a>
+            <a href="{{ route('formulario.upload') }}">Upload</a>
         </li>
     </ul>
 @endsection

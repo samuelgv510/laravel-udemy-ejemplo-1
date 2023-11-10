@@ -19,3 +19,5 @@ Route::post('/formulario/simple', [FormularioController::class, 'simple_post'])-
 Route::get('/formulario/flash', [FormularioController::class, 'flash'])->name('formulario.flash');
 Route::get('/formulario/flash2', [FormularioController::class, 'flash2'])->name('formulario.flash2');
 Route::get('/formulario/flash3', [FormularioController::class, 'flash3'])->name('formulario.flash3');
+Route::get('/formulario/upload', [FormularioController::class, 'upload'])->name('formulario.upload');
+Route::post('/formulario/upload', [FormularioController::class, 'upload_post'])->name('formulario.upload.post');
