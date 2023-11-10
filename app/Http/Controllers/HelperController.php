@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Helpers\Helper;
 
 class HelperController extends Controller
 {
     public function inicio()
     {
-        return view('helper.home');
+        $version = Helper::getVersion();
+        return view('helper.home', compact('version'));
     }
 }
