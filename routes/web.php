@@ -34,3 +34,5 @@ Route::get('/email/enviar', [EmailController::class, 'enviar'])->name('email.env
 Route::get('/bd', [BdController::class, 'inicio'])->name('bd.inicio');
 
 Route::get('/categoria', [CategoriaController::class, 'inicio'])->name('categoria.inicio');
+Route::get('/categoria/add', [CategoriaController::class, 'add'])->name('categoria.add');
+Route::post('/categoria/add', [CategoriaController::class, 'add_post'])->name('categoria.add.post');
