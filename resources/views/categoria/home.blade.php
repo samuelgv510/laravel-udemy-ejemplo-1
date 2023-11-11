@@ -20,7 +20,7 @@
                         <td>{{ $categoria->id }}</td>
                         <td>{{ $categoria->nombre }}</td>
                         <td>
-                            <a href=""><i class="fas fa-edit"></i></a>
+                            <a href="{{ route('categoria.edit', ['id' => $categoria->id]) }}"><i class="fas fa-edit"></i></a>
                             <a href=""><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>

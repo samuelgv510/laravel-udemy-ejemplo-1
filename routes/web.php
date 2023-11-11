@@ -36,3 +36,5 @@ Route::get('/bd', [BdController::class, 'inicio'])->name('bd.inicio');
 Route::get('/categoria', [CategoriaController::class, 'inicio'])->name('categoria.inicio');
 Route::get('/categoria/add', [CategoriaController::class, 'add'])->name('categoria.add');
 Route::post('/categoria/add', [CategoriaController::class, 'add_post'])->name('categoria.add.post');
+Route::get('/categoria/edit/{id}', [CategoriaController::class, 'edit'])->name('categoria.edit');
+Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');

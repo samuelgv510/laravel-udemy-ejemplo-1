@@ -39,4 +39,30 @@ class CategoriaController extends Controller
         session()->flash('mensaje', 'Se creó el registro');
         return redirect()->route('categoria.inicio');
     }
+    public function edit($id)
+    {
+        //$categoria = Categoria::where('id',$id)->first();
+        $categoria = Categoria::where(['id' => $id])->firstOrFail();
+        return view('categoria.edit', compact('categoria'));
+    }
+    public function edit_post(Request $request, $id)
+    {
+        $request->validate(
+            [
+                'nombre' => 'required|min:6',
+            ],
+            [
+                'nombre.required' => 'El campo Nombre está vacío',
+                'nombre.min' => 'El campo Nombre debe tener al menos 6 caracteres',
+            ]
+        );
+        //$categoria = Categoria::find($id);
+        $categoria = Categoria::where(['id' => $id])->firstOrFail();
+        $categoria->nombre = $request->input('nombre');
+        $categoria->slug = Str::slug($request->input('nombre'), '-');
+        $categoria->save();
+        session()->flash('css', 'success');
+        session()->flash('mensaje', 'Se editó el registro exitosamente');
+        return redirect()->route('categoria.inicio');
+    }
 }
