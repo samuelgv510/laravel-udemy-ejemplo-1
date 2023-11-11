@@ -35,3 +35,5 @@ sail artisan migrate:rollback
 sail artisan make:controller BdController
 
 sail artisan make:model Categoria
+sail artisan make:model Producto
+sail artisan make:model ProductoFoto
