@@ -8,6 +8,7 @@ use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\HelperController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\BdController;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -31,3 +32,5 @@ Route::get('/email', [EmailController::class, 'inicio'])->name('email.inicio');
 Route::get('/email/enviar', [EmailController::class, 'enviar'])->name('email.enviar');
 
 Route::get('/bd', [BdController::class, 'inicio'])->name('bd.inicio');
+
+Route::get('/categoria', [CategoriaController::class, 'inicio'])->name('categoria.inicio');

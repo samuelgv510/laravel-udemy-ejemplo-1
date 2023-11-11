@@ -103,6 +103,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
+    <link href="{{asset('fontawesome-free-5.15.4-web/css/all.css')}}" rel="stylesheet" type="text/css">
     @stack('css')
 </head>
 
