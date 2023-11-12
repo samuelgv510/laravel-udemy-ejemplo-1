@@ -104,6 +104,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.15.4-web/css/all.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/jquery.alerts.css')}}" rel="stylesheet">
     @stack('css')
 </head>
 
@@ -239,6 +240,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.alerts.js') }}"></script>
+    <script type="text/javascript" src="{{asset('js/funciones.js')}}"></script>
     @stack('js')
 </body>
 
