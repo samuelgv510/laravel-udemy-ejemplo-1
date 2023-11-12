@@ -25,7 +25,8 @@
                     <tr>
                         <td>{{ $producto->id }}</td>
                         <td>
-                            <a href="{{route('producto.categoria',['id'=>$producto->categoria->id])}}">{{ $producto->categoria->nombre }}</a>
+                            <a
+                                href="{{ route('producto.categoria', ['id' => $producto->categoria->id]) }}">{{ $producto->categoria->nombre }}</a>
                         </td>
                         <td>{{ $producto->nombre }}</td>
                         <td>${{ number_format($producto->precio, 0, '', '.') }}</td>
@@ -33,11 +34,12 @@
                         <td>{{ substr($producto->descripcion, 0, 50) }}...</td>
                         <td>{{ Helper::invierte_fecha($producto->fecha) }}</td>
                         <td>
-                            <a href=""><i class="fas fa-camera"></i></a>
+                            <a href="{{ route('producto.fotos', ['id' => $producto->id]) }}"><i class="fas fa-camera"></i></a>
                         </td>
                         <td>
                             <a href="{{ route('producto.edit', ['id' => $producto->id]) }}"><i class="fas fa-edit"></i></a>
-                            <a href="javascript:void(0);" onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.delete', ['id' => $producto->id]) }}')">
+                            <a href="javascript:void(0);"
+                                onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.delete', ['id' => $producto->id]) }}')">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>

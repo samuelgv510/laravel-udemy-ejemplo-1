@@ -106,4 +106,10 @@ class ProductoController extends Controller
         $productos = Producto::where(['categoria_id' => $id])->orderBy('id', 'desc')->get();
         return view('producto.categoria', compact('productos', 'categoria'));
     }
+    public function productoFotos($id)
+    {
+        $producto = Producto::where(['id' => $id])->firstOrFail();
+        $fotos = ProductoFoto::where(['producto_id' => $id])->get();
+        return view('producto.foto', compact('fotos', 'producto'));
+    }
 }

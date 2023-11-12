@@ -49,3 +49,4 @@ Route::post('/producto/edit/{id}', [ProductoController::class, 'edit_post'])->na
 Route::get('/producto/delete/{id}', [ProductoController::class, 'delete'])->name('producto.delete');
 
 Route::get('/producto/categoria/{id}', [ProductoController::class, 'productoCategoria'])->name('producto.categoria');
+Route::get('/producto/foto/{id}', [ProductoController::class, 'productoFotos'])->name('producto.fotos');

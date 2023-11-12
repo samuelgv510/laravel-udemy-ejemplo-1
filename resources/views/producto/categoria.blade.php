@@ -1,7 +1,7 @@
 @extends('../layouts.frontend')
 @section('content')
-    <h1>BD MySQL ({{$productos->count()}})</h1>
-    <h3>Categoría: {{$categoria->nombre}}</h3>
+    <h1>BD MySQL ({{ $productos->count() }})</h1>
+    <h3>Categoría: {{ $categoria->nombre }}</h3>
     <x-flash />
     <p class="d-flex justify-content-end">
         <a href="{{ route('producto.add') }}" class="btn btn-success"><i class="fas fa-check"></i>Crear</a>
@@ -34,11 +34,13 @@
                         <td>{{ substr($producto->descripcion, 0, 50) }}...</td>
                         <td>{{ Helper::invierte_fecha($producto->fecha) }}</td>
                         <td>
-                            <a href=""><i class="fas fa-camera"></i></a>
+                            <a href="{{ route('producto.fotos', ['id' => $producto->id]) }}"><i
+                                    class="fas fa-camera"></i></a>
                         </td>
                         <td>
                             <a href="{{ route('producto.edit', ['id' => $producto->id]) }}"><i class="fas fa-edit"></i></a>
-                            <a href="javascript:void(0);" onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.delete', ['id' => $producto->id]) }}')">
+                            <a href="javascript:void(0);"
+                                onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.delete', ['id' => $producto->id]) }}')">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
