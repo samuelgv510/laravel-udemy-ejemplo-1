@@ -41,3 +41,7 @@ sail artisan make:model ProductoFoto
 sail artisan make:controller CategoriaController
 
 sail artisan make:controller ProductoController
+
+sail artisan migrate:refresh
+
+sail artisan make:migration alter_stock_to_productos_table

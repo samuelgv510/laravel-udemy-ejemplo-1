@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Categoria;
+use App\Models\ProductoFoto;
 use Illuminate\Support\Str;
 
 class ProductoController extends Controller
@@ -84,5 +85,19 @@ class ProductoController extends Controller
         session()->flash('css', 'success');
         session()->flash('mensaje', 'Se editó el registro exitosamente');
         return redirect()->route('producto.inicio');
+    }
+    public function delete($id)
+    {
+        $producto = Producto::where(['id' => $id])->firstOrFail();
+        if (ProductoFoto::where(['producto_id' => $id])->count() == 0) {
+            Producto::where(['id' => $id])->delete();
+            session()->flash('css', 'success');
+            session()->flash('mensaje', 'Se eliminó el registro exitosamente');
+            return redirect()->route('producto.inicio');
+        } else {
+            session()->flash('css', 'danger');
+            session()->flash('mensaje', 'No es posible eliminar el registro');
+            return redirect()->route('producto.inicio');
+        }
     }
 }

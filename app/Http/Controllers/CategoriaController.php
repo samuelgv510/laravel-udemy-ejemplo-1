@@ -70,7 +70,7 @@ class CategoriaController extends Controller
     {
         if (Producto::where(['categoria_id' => $id])->count() == 0) {
             Categoria::where(['id' => $id])->delete();
-            session()->flash('css', 'danger');
+            session()->flash('css', 'success');
             session()->flash('mensaje', 'Se eliminó el registro exitosamente');
             return redirect()->route('categoria.inicio');
         } else {

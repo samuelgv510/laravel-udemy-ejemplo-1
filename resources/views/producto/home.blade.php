@@ -37,7 +37,7 @@
                         </td>
                         <td>
                             <a href="{{ route('producto.edit', ['id' => $producto->id]) }}"><i class="fas fa-edit"></i></a>
-                            <a href="javascript:void(0);">
+                            <a href="javascript:void(0);" onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.delete', ['id' => $producto->id]) }}')">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
