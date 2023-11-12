@@ -9,6 +9,7 @@ use App\Http\Controllers\HelperController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\BdController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -40,3 +41,5 @@ Route::get('/categoria/edit/{id}', [CategoriaController::class, 'edit'])->name('
 Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');
 Route::get('/categoria/delete/{id}', [CategoriaController::class, 'delete'])->name('categoria.delete');
 Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');
+
+Route::get('/producto', [ProductoController::class, 'inicio'])->name('producto.inicio');

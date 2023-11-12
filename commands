@@ -39,3 +39,5 @@ sail artisan make:model Producto
 sail artisan make:model ProductoFoto
 
 sail artisan make:controller CategoriaController
+
+sail artisan make:controller ProductoController

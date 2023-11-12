@@ -6,7 +6,7 @@
             <a href="{{ route('categoria.inicio') }}">Categorías</a>
         </li>
         <li>
-            <a href="">Productos</a>
+            <a href="{{ route('producto.inicio') }}">Productos</a>
         </li>
     </ul>
 @endsection
