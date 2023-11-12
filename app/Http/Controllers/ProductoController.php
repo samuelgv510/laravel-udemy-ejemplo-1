@@ -112,4 +112,35 @@ class ProductoController extends Controller
         $fotos = ProductoFoto::where(['producto_id' => $id])->get();
         return view('producto.foto', compact('fotos', 'producto'));
     }
+    public function productoFotos_post(Request $request, $id)
+    {
+        Producto::where(['id' => $id])->firstOrFail();
+        $request->validate(
+            [
+                'foto' => 'required|mimes:jpg,bmp,png|max:2048'
+            ],
+            [
+                'foto.required' => 'El campo foto está vacío',
+                'foto.mimes' => 'El campo foto debe ser JPG|PNG'
+            ]
+        );
+        switch ($_FILES['foto']['type']) {
+            case 'image/png':
+                $archivo = time() . ".png";
+                break;
+            case 'image/jpeg':
+                $archivo = time() . ".jpg";
+                break;
+        }
+        copy($_FILES['foto']['tmp_name'], 'uploads/productos/' . $archivo);
+        ProductoFoto::create(
+            [
+                'nombre' => $archivo,
+                'producto_id' => $id,
+            ]
+        );
+        session()->flash('css', 'success');
+        session()->flash('mensaje', 'Se subió el archivo exitosamente');
+        return redirect()->route('producto.fotos', ['id' => $id]);
+    }
 }
