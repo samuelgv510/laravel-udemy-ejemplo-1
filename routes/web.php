@@ -40,8 +40,9 @@ Route::post('/categoria/add', [CategoriaController::class, 'add_post'])->name('c
 Route::get('/categoria/edit/{id}', [CategoriaController::class, 'edit'])->name('categoria.edit');
 Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');
 Route::get('/categoria/delete/{id}', [CategoriaController::class, 'delete'])->name('categoria.delete');
-Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');
 
 Route::get('/producto', [ProductoController::class, 'inicio'])->name('producto.inicio');
 Route::get('/producto/add', [ProductoController::class, 'add'])->name('producto.add');
 Route::post('/producto/add', [ProductoController::class, 'add_post'])->name('producto.add.post');
+Route::get('/producto/edit/{id}', [ProductoController::class, 'edit'])->name('producto.edit');
+Route::post('/producto/edit/{id}', [ProductoController::class, 'edit_post'])->name('producto.edit.post');

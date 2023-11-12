@@ -35,9 +35,8 @@
                         <td>
                             <a href=""><i class="fas fa-camera"></i></a>
                         </td>
-                        <td>{{ $producto->nombre }}</td>
                         <td>
-                            <a href=""><i class="fas fa-edit"></i></a>
+                            <a href="{{ route('producto.edit', ['id' => $producto->id]) }}"><i class="fas fa-edit"></i></a>
                             <a href="javascript:void(0);">
                                 <i class="fas fa-trash"></i>
                             </a>
