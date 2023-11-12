@@ -43,3 +43,5 @@ Route::get('/categoria/delete/{id}', [CategoriaController::class, 'delete'])->na
 Route::post('/categoria/edit/{id}', [CategoriaController::class, 'edit_post'])->name('categoria.edit.post');
 
 Route::get('/producto', [ProductoController::class, 'inicio'])->name('producto.inicio');
+Route::get('/producto/add', [ProductoController::class, 'add'])->name('producto.add');
+Route::post('/producto/add', [ProductoController::class, 'add_post'])->name('producto.add.post');

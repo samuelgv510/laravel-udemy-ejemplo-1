@@ -3,7 +3,7 @@
     <h1>BD MySQL</h1>
     <x-flash />
     <p class="d-flex justify-content-end">
-        <a href="" class="btn btn-success"><i class="fas fa-check"></i>Crear</a>
+        <a href="{{ route('producto.add') }}" class="btn btn-success"><i class="fas fa-check"></i>Crear</a>
     </p>
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
