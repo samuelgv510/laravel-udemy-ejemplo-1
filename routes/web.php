@@ -47,3 +47,5 @@ Route::post('/producto/add', [ProductoController::class, 'add_post'])->name('pro
 Route::get('/producto/edit/{id}', [ProductoController::class, 'edit'])->name('producto.edit');
 Route::post('/producto/edit/{id}', [ProductoController::class, 'edit_post'])->name('producto.edit.post');
 Route::get('/producto/delete/{id}', [ProductoController::class, 'delete'])->name('producto.delete');
+
+Route::get('/producto/categoria/{id}', [ProductoController::class, 'productoCategoria'])->name('producto.categoria');

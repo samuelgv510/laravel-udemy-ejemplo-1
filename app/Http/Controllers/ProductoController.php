@@ -88,7 +88,7 @@ class ProductoController extends Controller
     }
     public function delete($id)
     {
-        $producto = Producto::where(['id' => $id])->firstOrFail();
+        Producto::where(['id' => $id])->firstOrFail();
         if (ProductoFoto::where(['producto_id' => $id])->count() == 0) {
             Producto::where(['id' => $id])->delete();
             session()->flash('css', 'success');
@@ -99,5 +99,11 @@ class ProductoController extends Controller
             session()->flash('mensaje', 'No es posible eliminar el registro');
             return redirect()->route('producto.inicio');
         }
+    }
+    public function productoCategoria($id)
+    {
+        $categoria = Categoria::where(['id' => $id])->firstOrFail();
+        $productos = Producto::where(['categoria_id' => $id])->orderBy('id', 'desc')->get();
+        return view('producto.categoria', compact('productos', 'categoria'));
     }
 }

@@ -1,6 +1,7 @@
 @extends('../layouts.frontend')
 @section('content')
-    <h1>BD MySQL</h1>
+    <h1>BD MySQL ({{$productos->count()}})</h1>
+    <h3>Categoría: {{$categoria->nombre}}</h3>
     <x-flash />
     <p class="d-flex justify-content-end">
         <a href="{{ route('producto.add') }}" class="btn btn-success"><i class="fas fa-check"></i>Crear</a>
@@ -25,7 +26,7 @@
                     <tr>
                         <td>{{ $producto->id }}</td>
                         <td>
-                            <a href="{{route('producto.categoria',['id'=>$producto->categoria->id])}}">{{ $producto->categoria->nombre }}</a>
+                            <a href="">{{ $producto->categoria->nombre }}</a>
                         </td>
                         <td>{{ $producto->nombre }}</td>
                         <td>${{ number_format($producto->precio, 0, '', '.') }}</td>
