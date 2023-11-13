@@ -10,6 +10,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\BdController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UtilesController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -55,3 +56,5 @@ Route::get('/producto/foto/delete/{producto_id}/{foto_id}', [ProductoController:
 
 Route::get('/producto/paginacion', [ProductoController::class, 'paginacion'])->name('producto.paginacion');
 Route::get('/producto/buscador', [ProductoController::class, 'buscador'])->name('producto.buscador');
+
+Route::get('/utiles', [UtilesController::class, 'inicio'])->name('utiles.inicio');

@@ -45,3 +45,5 @@ sail artisan make:controller ProductoController
 sail artisan migrate:refresh
 
 sail artisan make:migration alter_stock_to_productos_table
+
+sail artisan make:controller UtilesoController

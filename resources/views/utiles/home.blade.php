@@ -1,0 +1,18 @@
+@extends('../layouts.frontend')
+@section('content')
+    <h1>Útiles</h1>
+    <ul>
+        <li>
+            <a href="{{ route('categoria.inicio') }}">Reporte PDF</a>
+        </li>
+        <li>
+            <a href="{{ route('producto.inicio') }}">Reporte Excel</a>
+        </li>
+        <li>
+            <a href="{{ route('producto.paginacion') }}">cliente Rest con guzzlehttp</a>
+        </li>
+        <li>
+            <a href="{{ route('producto.buscador') }}">Cliente SOAP</a>
+        </li>
+    </ul>
+@endsection
