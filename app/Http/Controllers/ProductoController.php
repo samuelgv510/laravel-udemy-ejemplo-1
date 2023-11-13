@@ -109,7 +109,7 @@ class ProductoController extends Controller
     public function productoFotos($id)
     {
         $producto = Producto::where(['id' => $id])->firstOrFail();
-        $fotos = ProductoFoto::where(['producto_id' => $id])->get();
+        $fotos = ProductoFoto::where(['producto_id' => $id])->orderBy('id', 'desc')->get();
         return view('producto.foto', compact('fotos', 'producto'));
     }
     public function productoFotos_post(Request $request, $id)
@@ -142,5 +142,16 @@ class ProductoController extends Controller
         session()->flash('css', 'success');
         session()->flash('mensaje', 'Se subió el archivo exitosamente');
         return redirect()->route('producto.fotos', ['id' => $id]);
+    }
+    public function deleteFoto(Request $request, $producto_id, $foto_id)
+    {
+        Producto::where(['id' => $producto_id])->firstOrFail();
+        $foto = ProductoFoto::where(['id' => $foto_id])->firstOrFail();
+        unlink('uploads/productos/' . $foto->nombre);
+
+        ProductoFoto::where(['id' => $foto_id])->delete();
+        session()->flash('css', 'success');
+        session()->flash('mensaje', 'Se eliminó el registro exitosamente');
+        return redirect()->route('producto.fotos', ['id' => $producto_id]);
     }
 }

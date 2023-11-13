@@ -31,7 +31,10 @@
                                 height="200">
                         </td>
                         <td>
-                            <a href="javascript:void(0);"><i class="fas fa-trash"></i></a>
+                            <a href="javascript:void(0);"
+                                onclick="confirmAlert('Realmente desea eliminar este registro?','{{ route('producto.foto.delete', ['producto_id' => $producto->id, 'foto_id' => $foto->id]) }}')">
+                                <i class="fas fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

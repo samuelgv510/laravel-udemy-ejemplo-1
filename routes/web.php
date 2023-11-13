@@ -51,3 +51,4 @@ Route::get('/producto/delete/{id}', [ProductoController::class, 'delete'])->name
 Route::get('/producto/categoria/{id}', [ProductoController::class, 'productoCategoria'])->name('producto.categoria');
 Route::get('/producto/foto/{id}', [ProductoController::class, 'productoFotos'])->name('producto.fotos');
 Route::post('/producto/foto/{id}', [ProductoController::class, 'productoFotos_post'])->name('producto.fotos.post');
+Route::get('/producto/foto/delete/{producto_id}/{foto_id}', [ProductoController::class, 'deleteFoto'])->name('producto.foto.delete');
