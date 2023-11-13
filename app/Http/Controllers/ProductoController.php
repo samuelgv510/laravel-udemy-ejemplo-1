@@ -154,4 +154,9 @@ class ProductoController extends Controller
         session()->flash('mensaje', 'Se eliminó el registro exitosamente');
         return redirect()->route('producto.fotos', ['id' => $producto_id]);
     }
+    public function paginacion()
+    {
+        $productos = Producto::orderBy('id', 'desc')->paginate(env('PAGINACION'));
+        return view('producto.paginacion', compact('productos'));
+    }
 }
