@@ -159,4 +159,15 @@ class ProductoController extends Controller
         $productos = Producto::orderBy('id', 'desc')->paginate(env('PAGINACION'));
         return view('producto.paginacion', compact('productos'));
     }
+    public function buscador()
+    {
+        if (isset($_GET['b'])) {
+            $b = $_GET['b'];
+            $productos = Producto::where('nombre', 'like', '%' . $b . '%')->orderBy('id', 'desc')->get();
+        } else {
+            $b = '';
+            $productos = Producto::orderBy('id', 'desc')->get();
+        }
+        return view('producto.buscador', compact('productos', 'b'));
+    }
 }

@@ -54,3 +54,4 @@ Route::post('/producto/foto/{id}', [ProductoController::class, 'productoFotos_po
 Route::get('/producto/foto/delete/{producto_id}/{foto_id}', [ProductoController::class, 'deleteFoto'])->name('producto.foto.delete');
 
 Route::get('/producto/paginacion', [ProductoController::class, 'paginacion'])->name('producto.paginacion');
+Route::get('/producto/buscador', [ProductoController::class, 'buscador'])->name('producto.buscador');

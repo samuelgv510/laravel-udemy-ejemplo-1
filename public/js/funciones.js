@@ -12,3 +12,9 @@ function soloNumeros(evt) {
     /* digitos,del, sup,tab,arrows*/
     return ((key >= 48 && key <= 57) || key == 8 || key == 127 || key == 9 || key == 0);
 }
+function buscador() {
+    if (document.getElementById('b').value == 0) {
+        return false;
+    }
+    window.location = "/producto/buscador?b=" + document.getElementById('b').value;
+}

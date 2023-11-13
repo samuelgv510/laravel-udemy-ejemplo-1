@@ -9,7 +9,10 @@
             <a href="{{ route('producto.inicio') }}">Productos</a>
         </li>
         <li>
-            <a href="{{ route('producto.paginacion') }}">paginación</a>
+            <a href="{{ route('producto.paginacion') }}">Paginación</a>
+        </li>
+        <li>
+            <a href="{{ route('producto.buscador') }}">Buscador Interno</a>
         </li>
     </ul>
 @endsection
