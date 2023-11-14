@@ -3,7 +3,7 @@
     <h1>Útiles</h1>
     <ul>
         <li>
-            <a href="{{ route('categoria.inicio') }}">Reporte PDF</a>
+            <a href="{{ route('utiles.pdf') }}">Reporte PDF</a>
         </li>
         <li>
             <a href="{{ route('producto.inicio') }}">Reporte Excel</a>

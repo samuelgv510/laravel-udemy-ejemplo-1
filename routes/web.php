@@ -58,3 +58,4 @@ Route::get('/producto/paginacion', [ProductoController::class, 'paginacion'])->n
 Route::get('/producto/buscador', [ProductoController::class, 'buscador'])->name('producto.buscador');
 
 Route::get('/utiles', [UtilesController::class, 'inicio'])->name('utiles.inicio');
+Route::get('/utiles/pdf', [UtilesController::class, 'pdf'])->name('utiles.pdf');
