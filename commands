@@ -49,3 +49,5 @@ sail artisan make:migration alter_stock_to_productos_table
 sail artisan make:controller UtilesoController
 
 composer require mpdf/mpdf --with-all-dependencies
+
+composer require phpoffice/phpspreadsheet

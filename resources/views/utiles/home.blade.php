@@ -6,7 +6,7 @@
             <a href="{{ route('utiles.pdf') }}">Reporte PDF</a>
         </li>
         <li>
-            <a href="{{ route('producto.inicio') }}">Reporte Excel</a>
+            <a href="{{ route('utiles.excel') }}">Reporte Excel</a>
         </li>
         <li>
             <a href="{{ route('producto.paginacion') }}">cliente Rest con guzzlehttp</a>

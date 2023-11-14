@@ -59,3 +59,4 @@ Route::get('/producto/buscador', [ProductoController::class, 'buscador'])->name(
 
 Route::get('/utiles', [UtilesController::class, 'inicio'])->name('utiles.inicio');
 Route::get('/utiles/pdf', [UtilesController::class, 'pdf'])->name('utiles.pdf');
+Route::get('/utiles/excel', [UtilesController::class, 'excel'])->name('utiles.excel');
