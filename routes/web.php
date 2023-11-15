@@ -66,3 +66,4 @@ Route::get('/utiles/cliente-soap', [UtilesController::class, 'cliente_soap'])->n
 
 Route::get('/acceso/login', [AccesoController::class, 'login'])->name('acceso.login');
 Route::get('/acceso/registro', [AccesoController::class, 'registro'])->name('acceso.registro');
+Route::post('/acceso/registro', [AccesoController::class, 'registro_post'])->name('acceso.registro.post');

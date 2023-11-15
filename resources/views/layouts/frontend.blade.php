@@ -226,7 +226,9 @@
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('helper.inicio') }}">Helper</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('email.inicio') }}">E-mail</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('bd.inicio') }}">BD</a>
-                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('utiles.inicio') }}">Útiles</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('utiles.inicio') }}">Útiles</a>
+                <a class="nav-item nav-link link-body-emphasis" href="{{ route('acceso.login') }}">Login</a>                
+                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('acceso.registro') }}">Registro</a>
             </nav>
         </div>
     </div>

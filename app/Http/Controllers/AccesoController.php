@@ -12,5 +12,9 @@ class AccesoController extends Controller
     }
     public function registro()
     {
+        return view('acceso.registro');
+    }
+    public function registro_post(Request $request)
+    {
     }
 }
