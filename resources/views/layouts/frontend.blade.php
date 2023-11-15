@@ -103,8 +103,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
-    <link href="{{asset('fontawesome-free-5.15.4-web/css/all.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('css/jquery.alerts.css')}}" rel="stylesheet">
+    <link href="{{ asset('fontawesome-free-5.15.4-web/css/all.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/jquery.alerts.css') }}" rel="stylesheet">
     @stack('css')
 </head>
 
@@ -222,13 +222,26 @@
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.inicio') }}">Home</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.inicio') }}">Blade</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('template.stack') }}">Stack</a>
-                <a class="nav-item nav-link link-body-emphasis" href="{{ route('formulario.inicio') }}">Formularios</a>
+                <a class="nav-item nav-link link-body-emphasis"
+                    href="{{ route('formulario.inicio') }}">Formularios</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('helper.inicio') }}">Helper</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('email.inicio') }}">E-mail</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('bd.inicio') }}">BD</a>
                 <a class="nav-item nav-link link-body-emphasis" href="{{ route('utiles.inicio') }}">Útiles</a>
-                <a class="nav-item nav-link link-body-emphasis" href="{{ route('acceso.login') }}">Login</a>                
-                <a class="nav-item nav-link link-body-emphasis active" href="{{ route('acceso.registro') }}">Registro</a>
+                @if (Auth::check())
+                    <a class="nav-item nav-link link-body-emphasis" href="">Hola {{ Auth::user()->name }}
+                        ({{ @session('perfil') }})</a>
+                    <a class="nav-item nav-link link-body-emphasis" href="{{ route('acceso.login') }}">protegida</a>
+                    <a class="nav-item nav-link link-body-emphasis active"
+                        href="{{ route('acceso.registro') }}">Protegida 2</a>
+                    <a class="nav-item nav-link link-body-emphasis active"
+                        href="{{ route('acceso.registro') }}">Salir 2</a>
+                @else
+                    <a class="nav-item nav-link link-body-emphasis" href="{{ route('acceso.login') }}">Login</a>
+                    <a class="nav-item nav-link link-body-emphasis active"
+                        href="{{ route('acceso.registro') }}">Registro</a>
+                @endif
+
             </nav>
         </div>
     </div>
@@ -244,7 +257,7 @@
     </script>
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('js/jquery.alerts.js') }}"></script>
-    <script type="text/javascript" src="{{asset('js/funciones.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/funciones.js') }}"></script>
     @stack('js')
 </body>
 
