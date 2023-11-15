@@ -12,6 +12,10 @@ class AccesoController extends Controller
 {
     public function login()
     {
+        return view('acceso.login');
+    }
+    public function login_post(Request $request)
+    {
     }
     public function registro()
     {
