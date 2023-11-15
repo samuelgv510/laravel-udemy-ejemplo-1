@@ -55,3 +55,5 @@ composer require phpoffice/phpspreadsheet
 #composer require guzzlehttp/guzzle #ya viene instalada
 
 sail artisan make:migration create_perfiles_table
+
+sail artisan make:migration create_users_metadata_table
