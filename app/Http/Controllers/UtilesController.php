@@ -8,6 +8,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use App\Models\Producto;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Http;
 
 class UtilesController extends Controller
 {
@@ -88,5 +89,14 @@ class UtilesController extends Controller
         $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
         $writer->save('php://output');
         exit;
+    }
+    public function cliente_rest()
+    {
+        $response = Http::get('https://api.dailymotion.com/videos?limit=100');
+        $datos = $response->object();
+        $json = $response->body();
+        $status = $response->status();
+        $headers = $response->headers();
+        return view('utiles.cliente_rest', compact('datos', 'status', 'headers', 'json'));
     }
 }

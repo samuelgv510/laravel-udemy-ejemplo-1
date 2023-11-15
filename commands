@@ -51,3 +51,5 @@ sail artisan make:controller UtilesoController
 composer require mpdf/mpdf --with-all-dependencies
 
 composer require phpoffice/phpspreadsheet
+
+#composer require guzzlehttp/guzzle #ya viene instalada

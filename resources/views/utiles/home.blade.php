@@ -9,7 +9,7 @@
             <a href="{{ route('utiles.excel') }}">Reporte Excel</a>
         </li>
         <li>
-            <a href="{{ route('producto.paginacion') }}">cliente Rest con guzzlehttp</a>
+            <a href="{{ route('utiles.cliente_rest') }}">Cliente Rest con guzzlehttp</a>
         </li>
         <li>
             <a href="{{ route('producto.buscador') }}">Cliente SOAP</a>
