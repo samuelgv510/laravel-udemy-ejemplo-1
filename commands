@@ -53,3 +53,5 @@ composer require mpdf/mpdf --with-all-dependencies
 composer require phpoffice/phpspreadsheet
 
 #composer require guzzlehttp/guzzle #ya viene instalada
+
+sail artisan make:migration create_perfiles_table
