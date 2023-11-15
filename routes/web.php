@@ -11,6 +11,7 @@ use App\Http\Controllers\BdController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UtilesController;
+use App\Http\Controllers\AccesoController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -62,3 +63,6 @@ Route::get('/utiles/pdf', [UtilesController::class, 'pdf'])->name('utiles.pdf');
 Route::get('/utiles/excel', [UtilesController::class, 'excel'])->name('utiles.excel');
 Route::get('/utiles/cliente-rest', [UtilesController::class, 'cliente_rest'])->name('utiles.cliente_rest');
 Route::get('/utiles/cliente-soap', [UtilesController::class, 'cliente_soap'])->name('utiles.cliente_soap');
+
+Route::get('/acceso/login', [AccesoController::class, 'login'])->name('acceso.login');
+Route::get('/acceso/registro', [AccesoController::class, 'registro'])->name('acceso.registro');
