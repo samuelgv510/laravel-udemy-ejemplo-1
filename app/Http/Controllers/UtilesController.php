@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use App\Models\Producto;
 use App\Helpers\Helper;
 use Illuminate\Support\Facades\Http;
+use SoapClient;
 
 class UtilesController extends Controller
 {
@@ -98,5 +99,13 @@ class UtilesController extends Controller
         $status = $response->status();
         $headers = $response->headers();
         return view('utiles.cliente_rest', compact('datos', 'status', 'headers', 'json'));
+    }
+    public function cliente_soap()
+    {
+        //$cliente=new SoapClient("http://www.otravuelta.cl/soap/index.php?wsdl");   
+        $cliente = new SoapClient("http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL");
+        //$datos=  $cliente->retornarDatos("César", "info@tamila.cl", "+5696585454"); 
+        $datos = $cliente->ListOfCountryNamesByCode();
+        return view('utiles.cliente_soap', compact('datos'));
     }
 }

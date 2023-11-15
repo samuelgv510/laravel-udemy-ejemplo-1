@@ -12,7 +12,7 @@
             <a href="{{ route('utiles.cliente_rest') }}">Cliente Rest con guzzlehttp</a>
         </li>
         <li>
-            <a href="{{ route('producto.buscador') }}">Cliente SOAP</a>
+            <a href="{{ route('utiles.cliente_soap') }}">Cliente SOAP</a>
         </li>
     </ul>
 @endsection
