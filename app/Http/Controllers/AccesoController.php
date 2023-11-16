@@ -15,6 +15,16 @@ class AccesoController extends Controller
     {
         return view('acceso.login');
     }
+    public function salir(Request $request)
+    {
+        Auth::logout();
+        $request->session()->forget('user_metadata_id');
+        $request->session()->forget('perfil_id');
+        $request->session()->forget('perfil');
+        session()->flash('css', 'success');
+        session()->flash('mensaje', "Cerraste la sesión exitosamente");
+        return redirect()->route('acceso.login');
+    }
     public function login_post(Request $request)
     {
         $request->validate(

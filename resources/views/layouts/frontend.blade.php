@@ -231,11 +231,12 @@
                 @if (Auth::check())
                     <a class="nav-item nav-link link-body-emphasis" href="">Hola {{ Auth::user()->name }}
                         ({{ @session('perfil') }})</a>
-                    <a class="nav-item nav-link link-body-emphasis" href="{{ route('protegida.inicio') }}">protegida</a>
+                    <a class="nav-item nav-link link-body-emphasis"
+                        href="{{ route('protegida.inicio') }}">protegida</a>
                     <a class="nav-item nav-link link-body-emphasis active"
                         href="{{ route('protegida.otra') }}">Protegida 2</a>
-                    <a class="nav-item nav-link link-body-emphasis active"
-                        href="{{ route('acceso.registro') }}">Salir</a>
+                    <a class="nav-item nav-link link-body-emphasis active" href="javascript:void(0);"
+                        onclick="confirmAlert('Realmente desea cerrar la sesión','{{ route('acceso.salir') }}');">Salir</a>
                 @else
                     <a class="nav-item nav-link link-body-emphasis" href="{{ route('acceso.login') }}">Login</a>
                     <a class="nav-item nav-link link-body-emphasis active"
