@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UtilesController;
 use App\Http\Controllers\AccesoController;
+use App\Http\Controllers\ProtegidaController;
 
 Route::get('/blade', [HomeController::class, 'inicio'])->name('home.inicio');
 Route::get('/hola', [HomeController::class, 'hola'])->name('home.hola');
@@ -68,3 +69,6 @@ Route::get('/acceso/login', [AccesoController::class, 'login'])->name('acceso.lo
 Route::post('/acceso/login', [AccesoController::class, 'login_post'])->name('acceso.login.post');
 Route::get('/acceso/registro', [AccesoController::class, 'registro'])->name('acceso.registro');
 Route::post('/acceso/registro', [AccesoController::class, 'registro_post'])->name('acceso.registro.post');
+
+Route::get('/protegida', [ProtegidaController::class, 'inicio'])->name('protegida.inicio');
+Route::get('/protegida/otra', [ProtegidaController::class, 'otra'])->name('protegida.otra');

@@ -62,3 +62,5 @@ sail artisan make:controller AccesoController
 
 sail artisan make:model Perfil
 sail artisan make:model UserMetadata
+
+sail artisan make:controller ProtegidaController
